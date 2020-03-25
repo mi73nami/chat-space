@@ -42,4 +42,15 @@ Things you may want to cover:
 |username|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups, through:  :group_users
+- has_many :groups, through:  :groups_users
+
+## messagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: false|
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- has_many :groups, through:  :groups_users
