@@ -53,4 +53,4 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :groups, through:  :groups_users
+- belongs_to :group
