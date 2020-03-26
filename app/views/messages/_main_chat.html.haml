@@ -1,4 +1,11 @@
 .chat-main
   .chat-main__group-info
+    .chat-main__group-info__left-box
+      %h2.chat-main__group-info__left-box__group-name test
+      %ul.chat-main__group-info__left-box__members
+        %li.chat-main__group-info__left-box__members__member Member : masa
+    .chat-main__group-info__right
+      = link_to "#" do
+        .chat-main__group-info__right__btn Edit
   .chat-main__message-list
   .chat-main__message-form
