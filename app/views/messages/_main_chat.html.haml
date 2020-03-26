@@ -1,21 +1,25 @@
 .chat-main
-  .chat-main__group-info
-    .chat-main__group-info__left-box
-      %h2.chat-main__group-info__left-box__group-name test
-      %ul.chat-main__group-info__left-box__members
-        %li.chat-main__group-info__left-box__members__member Member : masa
-    .chat-main__group-info__right
+  .main-header
+    .left-contents
+      %h2.group-name test
+      %ul.members
+        %li.group-member Member : masa
+    .right-content
       = link_to "#" do
-        .chat-main__group-info__right__btn Edit
-  .chat-main__message-list
-    .chat-main__message-list__message
-      .chat-main__message-list__message__user
-        %p.chat-main__message-list__message__user__name masa
-        %p.chat-main__message-list__message__user__time 2019/11/20(Wed) 17:43:01
-      .chat-main__message-list__message__text おはよう！
-    .chat-main__message-list__message
-      .chat-main__message-list__message__user
-        %p.chat-main__message-list__message__user__name masa
-        %p.chat-main__message-list__message__user__time 2019/11/20(Wed) 17:43:01
-      .chat-main__message-list__message__text おはよう！
-  .chat-main__message-form
+        .right-content__btn Edit
+  .message-list
+    .message
+      .message__user
+        %p.message__user__name masa
+        %p.message__user__time 2019/11/20(Wed) 17:43:01
+      .message__text おはよう！
+    .message
+      .message__user
+        %p.message__user__name masa
+        %p.message__user__time 2019/11/20(Wed) 17:43:34
+      .message__text 今日は夜から雨
+  .chat-main__form
+    %form.chat-main__form__new
+      .chat-main__form__new__input-box
+        %input.chat-main__form__new__input-box__message{:placeholder => "type a message", :type => "text"}
+          %input{:accept => "image/*", :type => "file"}
