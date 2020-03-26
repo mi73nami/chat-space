@@ -1,4 +1,13 @@
 .side-bar
   .side-bar__user-name
     .top-items
+      .top-items__name
+        masa
+      %ul.top-items__icons
+        %li.top-items__icons__icon
+          = link_to "#", class: "icon--btn" do
+            = icon('far', 'edit')
+        %li.top-items__icons__icon
+          = link_to "#", class: "icon--btn" do
+            = icon('fas', 'cog')
   .side-bar__group-list
