@@ -11,9 +11,8 @@
           = link_to "#", class: "icon__btn" do
             = icon('fas', 'cog')
   .side-bar__group-list
-    %ul.side-bar__group-list__groups
-      %li.side-bar__group-list__groups__group
-        = link_to "#", class: "side-bar__group-list__groupsgroup__name" do  
-          techchamp
-        %p.side-bar__group-list__groups__group__message まだメッセージはありません
+    = link_to "#" do
+      .side-bar__group-list__group
+        .side-bar__group-list__group__name techcamp
+        .side-bar__group-list__group__new-message まだメッセージがありません
 
