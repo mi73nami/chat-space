@@ -1,3 +1,7 @@
+$white-color: #ffffff;
+$dark-blue: #253141;
+$light-blue: #38aef0;
+
 * {
   box-sizing: border-box;
 }
@@ -8,12 +12,12 @@
 }
 
 .side-bar{
-  background-color: #253141;
+  background-color: $dark-blue;
   height: 100vh;
   width: 300px;
   .side-header{
-    background-color: #253141;
-    color: #ffffff;
+    background-color: $dark-blue;
+    color: $white-color;
     height: 100px;
     display:flex;
     align-items:center;
@@ -21,7 +25,7 @@
 }
 
 .top-items{
-  background-color: #253141;
+  background-color: $dark-blue;
   height: 20px;
   width: 260px;
   margin: 0 auto;
@@ -35,13 +39,13 @@
   &__icons{
     height: 20px;
     width: 60px;
-    background-color: #253141;
+    background-color: $dark-blue;
     display: flex;
     justify-content: flex-end;
     .icon{
       padding-left: 5px;
     a{
-      color: #ffffff;
+      color: $white-color;
     }
     }
   }
@@ -54,7 +58,7 @@
   &__group{
     height: 91px;
     font-weight: bold;
-    color:#ffffff;
+    color: $white-color;
     .group-name{
       font-size: 15px;
       padding: 20px 20px 5px;
@@ -68,13 +72,13 @@
 
 
 .chat-main{
-  background-color: #ffffff;
+  background-color: $white-color;
   height: 100vh;
   width: calc(100vw - 300px);
 }
 
 .main-header{
-  background-color: #ffffff;
+  background-color: $white-color;
   border-bottom:1px #eeeeee solid;
   height: 100px;
   display:flex;
@@ -102,12 +106,12 @@
   &__btn{
     height: 40px;
     width: 72px;
-    border: 1px solid #38aef0;
+    border: 1px solid $light-blue;
     padding: 0 20px;
     text-align: center;
     line-height: 40px;
     margin: 28px 0 ;
-    color:#38aef0;
+    color: $light-blue;
     font-size: 16px;
   }
 }
@@ -139,21 +143,45 @@
   }
 }
 
-form{
+.form{
   background-color: #d2d2d2;
   height: 90px;
   padding: 20px 40px;
-  &__new{
-    &__input-box{
-      &__message{
-        height: 50px;
+  .send-message{
+    display: flex;
+    .input-box{
+      display: flex;
+      width: 100%;
+      position: relative;
+      .new-message{
         width: 100%;
-        padding: 0 10px;
+        height: 50px;
+        padding: 0 40px 0  10px;
+        color: #434a54;
+        border-style: none;
       }
     }
   }
 }
 
+.select-image{
+  position: absolute;
+  right: 10px;
+  line-height: 50px;
+  cursor: pointer;
+  .hiding{
+    display:none;
+  }
+  }
+
+.send-btn{
+  height: 50px;
+  width: 100px;
+  background-color: $light-blue;
+  color: $white-color;
+  margin-left: 15px;
+  cursor: pointer;
+}
 
 a{
   text-decoration: none;
