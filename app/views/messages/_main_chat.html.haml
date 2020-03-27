@@ -1,0 +1,28 @@
+.chat-main
+  .main-header
+    .left-contents
+      %h2.group-name test
+      %ul.members
+        %li.group-member Member : masa
+    .right-content
+      = link_to "#" do
+        .right-content__btn Edit
+  .message-list
+    .message
+      .message__user
+        %p.message__user__name masa
+        %p.message__user__time 2019/11/20(Wed) 17:43:01
+      .message__text おはよう！
+    .message
+      .message__user
+        %p.message__user__name masa
+        %p.message__user__time 2019/11/20(Wed) 17:43:34
+      .message__text 今日は夜から雨
+  .form
+    %form.send-message
+      .input-box
+        %input{:placeholder => "type a message", :type => "text", :class => "new-message"}
+        %label.select-image
+          = icon('far', 'image')
+          %input{:accept => "image/*", :type => "file", :class => "hiding"}
+      %input{:type => "submit", :value => "Send", :class => "send-btn"}
