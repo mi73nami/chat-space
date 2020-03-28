@@ -1,28 +1,27 @@
 .chat-main
   .main-header
     .left-contents
-      %h2.group-name test
-      %ul.members
-        %li.group-member Member : masa
+      .group-name
+        = @group.name
+      .member-box
+        .member
+          Member:
+        %ul.members
+          %li.group-member
+            - @group.users.each do |user|
+              = user.name
     .right-content
-      = link_to "#" do
+      = link_to edit_group_path(@group.id) do
         .right-content__btn Edit
   .message-list
-    .message
-      .message__user
-        %p.message__user__name masa
-        %p.message__user__time 2019/11/20(Wed) 17:43:01
-      .message__text おはよう！
-    .message
-      .message__user
-        %p.message__user__name masa
-        %p.message__user__time 2019/11/20(Wed) 17:43:34
-      .message__text 今日は夜から雨
+    = render @messages
   .form
-    %form.send-message
-      .input-box
-        %input{:placeholder => "type a message", :type => "text", :class => "new-message"}
-        %label.select-image
-          = icon('far', 'image')
-          %input{:accept => "image/*", :type => "file", :class => "hiding"}
-      %input{:type => "submit", :value => "Send", :class => "send-btn"}
+    .send-message
+      = form_for [@group, @message] do |f|
+        .form-flex
+          .input-box
+            = f.text_field :content, class: 'new-message', placeholder: 'type a message'
+            = f.label :image, class: 'select-image' do
+              = icon('far', 'image')
+              = f.file_field :image, class: 'hiding'
+          = f.submit 'Send', class: 'send-btn'
