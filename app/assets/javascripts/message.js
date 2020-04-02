@@ -7,7 +7,9 @@ $(function(){
                       <p class = "message__user__time">${message.created_at}</p>
                     </div>
                     <div class = "message__content">
-                        ${message.content}
+                        <p class = "message__content-text">
+                          ${message.content}
+                        </p>
                       <img class = "content__image" src = ${message.image} >
                     </div>
                   </div>`
@@ -18,7 +20,9 @@ $(function(){
                       <p class = "message__user__time">${message.created_at}</p>
                     </div>
                     <div class = "message__content">
-                      ${message.content}
+                      <p class = "message__content-text">
+                        ${message.content}
+                      </p>
                     </div>
                   </div>`
     } else if (message.image) {
